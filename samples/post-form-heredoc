@@ -1,0 +1,8 @@
+POST http://httpbin.org/post
+
+%FIELD: username <<EOF
+user@example.com
+EOF
+%FIELD: password <<EOF
+SuperSecret
+EOF

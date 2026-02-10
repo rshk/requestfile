@@ -1,0 +1,33 @@
+# This is a comment at the start of the file
+# This is another comment
+
+POST http://httpbin.org/get
+Authorization: bearer foobar
+X-Some-header: hello world this is a header
+X-Some-other-header: hello:foo:bar:confusing:header!
+%HEADER: x-example-1 "example value"
+%HEADER: x-example-2 some-other-value
+%HEADER: x-example-3 </path/to/file.txt
+%HEADER: x-example-3 <"/path/to/file.txt"
+# This is another comment
+%HEADER: x-example-4 <<EOF
+Some text
+EOF
+%HEADER: <<KEY <<VALUE
+x-example-5
+KEY
+Value of header 5
+VALUE
+%SET: somevar "somevalue"
+%HEADER: x-example-6 $somevar
+
+# This is the request body
+%FIELD: foo foovalue
+%FIELD: bar "barvalue"
+%FIELD: baz <<BAZ
+This is the baz value
+BAZ
+# This is another comment
+Raw body data here
+foo=bar&baz=quux
+%FIELD: with-special-chars "Hello\nThis is \x41 string\xff with \u27f9 and \U0001f91f."

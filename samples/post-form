@@ -1,0 +1,5 @@
+POST http://httpbin.org/post
+User-Agent: requestfile-example/0.1
+
+%FIELD: username "user@example.com"
+%FIELD: password "SuperSecret"

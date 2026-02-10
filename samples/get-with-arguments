@@ -1,0 +1,7 @@
+# GET request with arguments
+
+%SET-DEFAULT: user_id "1"
+%SET-DEFAULT: query "Hello world"
+
+GET "http://httpbin.org/get/user/${user_id}"|interpolate
+%PARAM: query $query

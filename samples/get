@@ -1,0 +1,12 @@
+# Sample GET request
+
+GET http://httpbin.org/get
+%PARAM: foo FOOVALUE
+%PARAM: bar BARVALUE
+X-Custom-Header: header1
+%HEADER: X-Custom-Header2 "Custom header 2"
+%HEADER: X-Custom-Header2 <<EOF
+Custom header 3
+EOF
+%COOKIE: foocookie "FOO-COOKIE-VALUE"
+%COOKIE: barcookie "BAR-COOKIE-VALUE"
