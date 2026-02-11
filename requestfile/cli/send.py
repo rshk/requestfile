@@ -22,8 +22,23 @@ from requestfile.printing import print_requestfile
 @click.option("-v", "--verbose", is_flag=True, default=False)
 @click.option("-i", "--show-headers", is_flag=True, default=False)
 @click.option("-a", "--arg", "arguments_list", multiple=True)
-def cmd_send(inputfile, verbose, show_headers, arguments_list):
-    variables = {key: value for key, value in (x.split("=", 1) for x in arguments_list)}
+@click.option("-e", "--env", "env_list", multiple=True)
+def cmd_send(inputfile, verbose, show_headers, arguments_list, env_list):
+    variables = {}
+
+    for argspec in arguments_list:
+        key, value = argspec.split("=", 1)
+        variables[key] = value
+
+    for envspec in env_list:
+        parts = envspec.split(":", 1)
+        match parts:
+            case (key, envname):
+                variables[key] = os.environ[envname]
+            case (envname,):
+                variables[envname] = os.environ[envname]
+            case _:
+                raise ValueError(f"Bad env spec: {envspec}")
 
     console = Console(highlight=False, markup=False)
 

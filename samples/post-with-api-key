@@ -1,0 +1,6 @@
+POST http://httpbin.org/post
+User-Agent: requestfile-example/0.1
+%HEADER: Authorization "bearer ${AUTH_TOKEN}"|interpolate
+
+%SET-DEFAULT: query "Default search query"
+%FIELD: query $query
