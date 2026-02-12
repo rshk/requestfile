@@ -18,6 +18,13 @@ authors = [
     {name = "Sam Santi", email = "redshadow@hackzine.org"},
 ]
 
+[project.urls]
+# Homepage = "https://example.com"
+# Documentation = "https://readthedocs.org"
+Repository = "https://github.com/rshk/requestfile"
+Issues = "https://github.com/rshk/requestfile/issues"
+# Changelog = ""
+
 [project.scripts]
 requestfile = "requestfile.cli:main"
 
