@@ -2,6 +2,8 @@
 
 Human-friendly HTTP requests as plain text files.
 
+![PyPI - Version](https://img.shields.io/pypi/v/requestfile)
+![GitHub License](https://img.shields.io/github/license/rshk/requestfile)
 [![Python package](https://github.com/rshk/requestfile/actions/workflows/python-package.yml/badge.svg)](https://github.com/rshk/requestfile/actions/workflows/python-package.yml)
 
 ## Features
