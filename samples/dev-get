@@ -1,0 +1,5 @@
+# Send a GET request to the dev server
+
+%SET-DEFAULT: target "http://localhost:8880"
+
+GET "${target}/hello.txt"|interpolate

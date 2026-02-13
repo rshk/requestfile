@@ -31,6 +31,10 @@ class Requestline:
     method: str
     url_arg: Argument
 
+    @classmethod
+    def from_method_and_url(cls, method: str, url: str):
+        return cls(method=method, url_arg=Argument(None, QuotedValue(url)))
+
 
 @dataclass(slots=True)
 class Command:

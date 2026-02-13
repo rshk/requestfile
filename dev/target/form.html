@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML Forms</title>
+    <style>
+      body {
+        font-family: monospace;
+        font-size: 20px;
+        background: #eee;
+        color: #222;
+      }
+      input,
+      button {
+        font-size: 1rem;
+        border: solid 1px #222;
+        padding: 1em;
+      }
+      input {
+        background: #fff;
+        color: #222;
+      }
+      button {
+        cursor: pointer;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin: 0 auto; max-width: 960px">
+      <h1>GET form</h1>
+      <div>
+        <form method="GET">
+          <input type="text" name="foo" value="foo" />
+          <input type="text" name="bar" value="bar" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <h1>POST form</h1>
+      <div>
+        <form method="POST">
+          <input type="text" name="foo" value="foo" />
+          <input type="text" name="bar" value="bar" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <h1>POST multipart form</h1>
+      <div>
+        <form method="POST" enctype="multipart/form-data">
+          <input type="text" name="foo" value="foo" />
+          <input type="text" name="bar" value="bar" />
+          <input type="file" name="upload" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
